@@ -108,7 +108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             foreach ($city as $k=>$v) {
                 $city_list .= '<div class="e-109">'.$v.'</div>';
             }
-            $city_list = '<div class="e-110"><div class="e-111">'.$city_list.'</div></div>';
+            $city_list = '<div class="e-110"><div class="e-40"></div><div class="e-111">'.$city_list.'</div></div>';
 
         ?>
 		<div class="e-8a"><div class="e-8b"><div class="e-8c"><span class="e-8d"><?php echo '$ - '.$USD; ?></span><span class="e-8d"><?php echo '€ - '.$EUR; ?></span></div><div class="e-8c"><span class="e-8d"><a href="tel:+7 (747) 257 00 00" class="e-108">+7 (747) 257 00 00</a></span><span class="e-8d"><a href="tel:+7 (747) 257 17 17" class="e-108">+7 (747) 257 17 17</a></span></div><div class="e-8c">Схема проезда</div><div class="e-8c">Ваш город: <span class="e-8e">Алматы<?php echo $city_list; ?></span></div></div></div>
