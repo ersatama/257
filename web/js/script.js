@@ -2,21 +2,6 @@ $(document).ready(function() {
 	eval($("#eval").html());
 });
 var classes = {
-	citySel: function(a) {
-		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
-		b = parseInt($(a).attr('data-id'));
-		if (b===0) {
-			$("#main-city-list").removeAttr("style");
-			$("#second-city-list").attr("style","display: none !important;");
-		} else {
-			$("#main-city-list").removeAttr("style");
-			$("#second-city-list").attr("style","display: none !important;");
-		}
-	},
-	citySelect: function(a) {
-		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
-
-	},
 	Homepage: function(a) {
 		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
 		b = a.hot_data.list;
@@ -72,6 +57,21 @@ function escapeHtml(text) {
       .replace(/'/g, "&#039;");
 }
 var page = {
+	citySel: function(a) {
+		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+		b = parseInt($(a).attr('data-id'));
+		if (b===0) {
+			$("#main-city-list").removeAttr("style");
+			$("#second-city-list").attr("style","display: none !important;");
+		} else {
+			$("#main-city-list").removeAttr("style");
+			$("#second-city-list").attr("style","display: none !important;");
+		}
+	},
+	citySelect: function(a) {
+		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+
+	},
 	leaveRequestClient: function() {
 		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
 		$(document.body).css({'overflow':'hidden'}).append('<div class="e-86"><div class="e-87" onclick="return page.closeView();"></div><div class="e-88"><div class="e-92">Спасибо за заявку, скоро с Вами свяжутся!</div><div class="e-95">Оставьте заявку</div><div class="e-89"><input type="text" class="e-90" placeholder="Ваше имя"></div><div class="e-89"><input type="text" class="e-90" placeholder="Ваш телефон номер"></div><div class="e-89"><textarea class="e-107" placeholder="Комментарий (* не обязательно)"></textarea></div><div class="e-89"><button class="e-91" onclick="return page.leaveRequestClientForm();">Оставить заявку</button></div></div></div>');
