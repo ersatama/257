@@ -1171,12 +1171,15 @@ float: left;
 .e-112 {
 
 }
-.e-113 {
-
-}
-.e-114 {
-
+.e-113 {padding: 10px;color: grey;font-weight: normal;}
+.e-114 {display: grid;margin: 0 10px 10px 10px;grid-template-columns: 1fr 1fr;grid-column-gap: 10px;}
+.e-114 > div {
+    text-align: center;
+    padding: 5px 0 5px 0;
 }
 .e-115 {
-    
+
+}
+.e-116 {
+
 }

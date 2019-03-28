@@ -135,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             foreach ($city as $k=>$v) {
                 $city_list .= '<div class="e-109">'.$v.'</div>';
             }
-            $city_list = '<div class="e-110" id="main-city-list" '.($lang_stat?'style="display: none !important;"':'').'><div class="e-40" style="left: 95px;"></div><div class="e-111">'.$city_list.'</div></div><div id="second-city-list" class="e-110" '.($lang_stat?'style="display: block !important;"':'').'><div class="e-112"><div class="e-40" style="left: 95px;"></div><div class="e-113">Ваш город: '.$result.'</div><div class="e-114"><div class="e-115">Нет</div><div class="e-116">Да</div></div></div></div>';
+            $city_list = '<div class="e-110" id="main-city-list" '.($lang_stat?'style="display: none !important;"':'').'><div class="e-40" style="left: 95px;"></div><div class="e-111">'.$city_list.'</div></div><div id="second-city-list" class="e-110" '.($lang_stat?'style="display: block !important;"':'').'><div class="e-112"><div class="e-40" style="left: 95px;"></div><div class="e-113">Ваш город: <span style="color: rgb(0, 124, 185);font-weight: bold;">'.$result.'</span></div><div class="e-114"><div class="e-115">Нет</div><div class="e-116">Да</div></div></div></div>';
 
 
 
