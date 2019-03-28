@@ -102,7 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             $EUR = number_format((float)$EUR, 1, '.', '');
 
         ?>
-		<div class="e-8a"><div class="e-8b"><div class="e-8c"><span class="e-8d"><?php echo '$ - '.$USD; ?></span><span class="e-8d"><?php echo '€ - '.$EUR; ?></span></div><div class="e-8c"><a href="tel:+7 (747) 257 00 00"><span class="e-8d">+7 (747) 257 00 00</span></a><a href="tel:+7 (747) 257 17 17"><span class="e-8d">+7 (747) 257 17 17</span></a></div><div class="e-8c">Схема проезда</div><div class="e-8c">Ваш город: <span class="e-8e">Алматы</span></div></div></div>
+		<div class="e-8a"><div class="e-8b"><div class="e-8c"><span class="e-8d"><?php echo '$ - '.$USD; ?></span><span class="e-8d"><?php echo '€ - '.$EUR; ?></span></div><div class="e-8c"><span class="e-8d"><a href="tel:+7 (747) 257 00 00">+7 (747) 257 00 00</a></span><span class="e-8d"><a href="tel:+7 (747) 257 17 17">+7 (747) 257 17 17</a></span></div><div class="e-8c">Схема проезда</div><div class="e-8c">Ваш город: <span class="e-8e">Алматы</span></div></div></div>
 	<div class="e-8">
                 <div class="e-9"><a href="/tours"><div class="e-38">Горящие туры</div></a><div class="e-39"></div>
                     <div class="e-36">
