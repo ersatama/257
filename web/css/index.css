@@ -1148,6 +1148,9 @@ font-size: 14px;
 float: left;
 }
 .e-108 {
-
-    
+    color: white;
+}
+.e-108:hover {
+    color: white;
+    text-decoration: underline;
 }
