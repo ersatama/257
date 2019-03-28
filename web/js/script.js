@@ -2,6 +2,21 @@ $(document).ready(function() {
 	eval($("#eval").html());
 });
 var classes = {
+	citySel: function(a) {
+		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+		b = parseInt($(a).attr('data-id'));
+		if (b===0) {
+			$("#main-city-list").removeAttr("style");
+			$("#second-city-list").attr("style","display: none !important;");
+		} else {
+			$("#main-city-list").removeAttr("style");
+			$("#second-city-list").attr("style","display: none !important;");
+		}
+	},
+	citySelect: function(a) {
+		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+
+	},
 	Homepage: function(a) {
 		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
 		b = a.hot_data.list;
