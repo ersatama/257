@@ -1147,10 +1147,6 @@ box-shadow: 0 0 2px 0 rgba(0,0,0,.2) inset;
 font-size: 14px;
     
 float: left;
-display: none;
-}
-.e-8e:hover > .e-107 {
-    display: block;
 }
 .e-108 {
     color: white;
@@ -1165,7 +1161,10 @@ display: none;
     color: white !important;
     background: rgb(0, 153, 171);
 }
-.e-110 {position: absolute;box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 0px;color: rgb(0, 153, 171);z-index: 10;font-size: 12px;width: 140px;background: white;border-radius: 5px;margin: 10px 0px 0px;padding: 5px 0px;}
+.e-110 {position: absolute;box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 0px;color: rgb(0, 153, 171);z-index: 10;font-size: 12px;width: 140px;background: white;border-radius: 5px;margin: 10px 0px 0px;padding: 5px 0px;display: none;}
+.e-8e:hover > .e-110 {
+    display: block;
+}
 .e-111 {
     overflow: hidden;
 }
