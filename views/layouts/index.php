@@ -72,7 +72,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="e-0"></div>
 <div class="container-fluid full-width" style="padding: 0;">
 	<div class="e-98">
-		<div class="e-8a"><div class="e-8b"><div class="e-8c"><span class="e-8d">+7 747 257 00 00</span><span class="e-8d">+7 (747) 257 17 17</span></div><div class="e-8c">Схема проезда</div><div class="e-8c">Ваш город: <span class="e-8e">Алматы</span></div></div></div>
+        <?php
+
+            $USD = '-';
+            $EUR = '-';
+
+            $url = 'https://data.egov.kz/api/v2/valutalar_bagamdary4/v497';
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $res = json_decode(curl_exec($ch),true);//
+            curl_close($ch);
+
+            if (sizeof($res) > 0) {
+                foreach ($res as $key=>$val) {
+                    if ((int)$val['id'] === 13) {
+                        $EUR = $val['kurs']+(($val['kurs']/100)*1);
+                    } else if ((int)$val['id'] === 12) {
+                        $USD = $val['kurs']+(($val['kurs']/100)*1);
+                    }
+                }
+            }
+            
+            $USD = number_format((float)$USD, 1, '.', '');
+            $EUR = number_format((float)$EUR, 1, '.', '');
+
+        ?>
+		<div class="e-8a"><div class="e-8b"><div class="e-8c"><span class="e-8d"><?php echo '$:'.$USD; ?></span><span class="e-8d"><?php echo '€:'.$EUR; ?></span></div><div class="e-8c"><span class="e-8d">+7 747 257 00 00</span><span class="e-8d">+7 (747) 257 17 17</span></div><div class="e-8c">Схема проезда</div><div class="e-8c">Ваш город: <span class="e-8e">Алматы</span></div></div></div>
 	<div class="e-8">
                 <div class="e-9"><a href="/tours"><div class="e-38">Горящие туры</div></a><div class="e-39"></div>
                     <div class="e-36">
