@@ -101,6 +101,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             $USD = number_format((float)$USD, 1, '.', '');
             $EUR = number_format((float)$EUR, 1, '.', '');
 
+            $CITY = ['ALA'=>'Алматы','AST'=>'Астана','BAY'=>'Байконур','AKT'=>'Актобе','ATY'=>'Атырау','ZHA'=>'Тараз','KAR'=>'Караганда','KUS'=>'Костанай','KZY'=>'Кызыл Орда','PAV'=>'Павлодар','MNG'=>'Актау'];
+            $result = 'Алматы';
+
+        $lang_stat = false;
+
+        if (isset($_COOKIE['location'])) {
+            $loc = json_decode($_COOKIE['location'],true);
+            $result = $loc['v'];
+        } else {
+        if(filter_var($client, FILTER_VALIDATE_IP)) $ip = $client;
+        elseif(filter_var($forward, FILTER_VALIDATE_IP)) $ip = $forward;
+        else $ip = $remote;
+        
+        $lang_stat = true;
+
+        $ip_data = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip));    
+        if($ip_data && $ip_data->geoplugin_countryName != null)
+        {
+            if ($ip_data->geoplugin_countryCode==='KZ') {
+                if (array_key_exists($ip_data->geoplugin_regionCode, $CITY)) {
+                    $result = $CITY[ $ip_data->geoplugin_regionCode ];
+                }
+            }
+        }
+
+        }
+
             $city_list = '';
 
             $city = ['Алматы','Астана'];
@@ -108,10 +135,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             foreach ($city as $k=>$v) {
                 $city_list .= '<div class="e-109">'.$v.'</div>';
             }
-            $city_list = '<div class="e-110"><div class="e-40" style="left: 95px;"></div><div class="e-111">'.$city_list.'</div></div>';
+            $city_list = '<div class="e-110" id="main-city-list" '.($lang_stat?'style="display: none !important;"':'').'><div class="e-40" style="left: 95px;"></div><div class="e-111">'.$city_list.'</div></div><div id="second-city-list" class="e-110" '.($lang_stat?'style="display: block !important;"':'').'><div class="e-112"><div class="e-40" style="left: 95px;"></div><div class="e-113">Ваш город: '.$result.'</div><div class="e-114"><div class="e-115">Нет</div><div class="e-116">Да</div></div></div></div>';
+
+
 
         ?>
-		<div class="e-8a"><div class="e-8b"><div class="e-8c"><span class="e-8d"><?php echo '$ - '.$USD; ?></span><span class="e-8d"><?php echo '€ - '.$EUR; ?></span></div><div class="e-8c"><span class="e-8d"><a href="tel:+7 (747) 257 00 00" class="e-108">+7 (747) 257 00 00</a></span><span class="e-8d"><a href="tel:+7 (747) 257 17 17" class="e-108">+7 (747) 257 17 17</a></span></div><div class="e-8c">Схема проезда</div><div class="e-8c">Ваш город: <span class="e-8e">Алматы<?php echo $city_list; ?></span></div></div></div>
+		<div class="e-8a"><div class="e-8b"><div class="e-8c"><span class="e-8d"><?php echo '$ - '.$USD; ?></span><span class="e-8d"><?php echo '€ - '.$EUR; ?></span></div><div class="e-8c"><span class="e-8d"><a href="tel:+7 (747) 257 00 00" class="e-108">+7 (747) 257 00 00</a></span><span class="e-8d"><a href="tel:+7 (747) 257 17 17" class="e-108">+7 (747) 257 17 17</a></span></div><div class="e-8c">Схема проезда</div><div class="e-8c">Ваш город: <span class="e-8e"><span class="h-19"><?php echo $result; ?></span><?php echo $city_list; ?></span></div></div></div>
 	<div class="e-8">
                 <div class="e-9"><a href="/tours"><div class="e-38">Горящие туры</div></a><div class="e-39"></div>
                     <div class="e-36">
