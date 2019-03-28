@@ -1147,6 +1147,10 @@ box-shadow: 0 0 2px 0 rgba(0,0,0,.2) inset;
 font-size: 14px;
     
 float: left;
+display: none;
+}
+.e-8e:hover > .e-107 {
+    display: block;
 }
 .e-108 {
     color: white;
