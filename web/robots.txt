@@ -1,0 +1,16 @@
+Host: chemodan.kz
+Sitemap: http://chemodan.kz/sitemap.xml 
+
+User-Agent: *
+Disallow: /web/assets
+Disallow: /web/css
+Disallow: /web/img
+Disallow: /web/js
+Disallow: /master
+Disallow: /pages
+Disallow: /temp
+Disallow: /tsn
+Disallow: /*.php
+Disallow: /*.js
+Disallow: /*.css
+Disallow: /*.ico
