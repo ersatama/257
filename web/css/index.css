@@ -80,6 +80,7 @@ display: table;
 .e-8c {
     float: left;
     margin: 0 20px 0 0;
+    font-weight: bold;
 }
 .e-8c:last-child {
     margin: 0;  
