@@ -93,7 +93,8 @@ display: table;
     margin: 0;  
 }
 .e-8e {
-    
+    text-decoration: underline;
+    cursor: pointer;
 }
 .e-9 {
     float: left;
@@ -1153,4 +1154,5 @@ float: left;
 .e-108:hover {
     color: white;
     text-decoration: underline;
+    cursor: pointer;
 }
