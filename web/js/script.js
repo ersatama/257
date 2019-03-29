@@ -66,11 +66,31 @@ var page = {
 		} else {
 			$("#main-city-list").removeAttr("style");
 			$("#second-city-list").attr("style","display: none !important;");
+			c = $(".e-109");
+			d = c.length;
+			for (e=0;e<d;e++) {
+				f = c.eq(e);
+				if (f.attr('data-id') === $(".e-113").find('span').html()) {
+					f.click();
+					break;
+				}
+			}
 		}
+	},
+	setCookie: function(name,value,days) {
+    	var expires = "";
+    	if (days) {
+        	var date = new Date();
+        	date.setTime(date.getTime() + (days*24*60*60*1000));
+        	expires = "; expires=" + date.toUTCString();
+    	}
+    	document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    	window.location.reload();
 	},
 	citySelect: function(a) {
 		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
-		
+		b = $(a).attr('data-id');
+		page.setCookie('location',JSON.stringify(b),10);
 	},
 	leaveRequestClient: function() {
 		var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
