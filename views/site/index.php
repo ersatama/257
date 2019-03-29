@@ -104,18 +104,18 @@ $this->title = 'Туристическое агентство в Алматы - 
 	<div class="e-28a">
 		<div class="e-28b">
 			<div class="e-28c" style="background-image: url(/web/img/i35.jpg);"></div>
-			<div class="e-28d">Сеть Турагентств 257 №1 в Алмате</div>
+			<div class="e-28d">Сеть Турагентств 257 в Алмате</div>
 			<div class="e-28e">Адрес: Жандосова, 13</div>
 		</div>
 		<div class="e-28b">
 			<div class="e-28c" style="background-image: url(/web/img/i.jpg);"></div>
-			<div class="e-28d">Сеть Турагентств 257 №17 в Алмате</div>
-			<div class="e-28e">Адрес: Желтоксана, 117 <br>+7 (727) 339 02 57, +7 (747) 257 17 17</div>
+			<div class="e-28d">Сеть Турагентств 257 в Алмате</div>
+			<div class="e-28e">Адрес: Желтоксан, 117 <br>+7 (727) 339 02 57, +7 (747) 257 17 17</div>
 		</div>
 		<div class="e-28b">
 			<div class="e-28c" style="background-image: url(/web/img/i36.jpg);"></div>
-			<div class="e-28d">Сеть Турагентств 257 №2 в Астане</div>
-			<div class="e-28e">Адрес: район Есиль, Мангилик ел 52/А офис 2 БЦ NOBLE 1 этаж <br>+7 (747) 257 00 10, +7 (717) 272 59 99</div>
+			<div class="e-28d">Сеть Турагентств 257 в Астане</div>
+			<div class="e-28e">Адрес: г. Нур-султан, р-н Есиль, Мангилик ел 52/А, офис 2, БЦ NOBLE, 1этаж<br>+7 (747) 257 00 10, +7 (717) 272 59 99</div>
 		</div>
 	</div>
 	<div class="e-21">Наши партнеры</div>
