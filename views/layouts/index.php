@@ -108,7 +108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         if (isset($_COOKIE['location'])) {
            // $loc = json_decode($_COOKIE['location'],true);
-            $result = '';//$_COOKIE['location'];//$loc['v'];
+            $result = $_COOKIE['location'];//$loc['v'];
         } else {
         if(filter_var($client, FILTER_VALIDATE_IP)) $ip = $client;
         elseif(filter_var($forward, FILTER_VALIDATE_IP)) $ip = $forward;
